@@ -72,13 +72,12 @@ class Bulbs():
     def restore_previous_state(self) -> None:
         for bulb_id, bulb in self.bulbs.items():
             bulb_state = self.state[bulb_id]
-            bulb.set_mode(mode=bulb_state["mode"])
 
-            if bulb_state['is_on']:
-                match bulb_state["mode"]:
-                    case "colour":
-                        bulb.set_colour(bulb_state["colour"])
-                    case "white":
-                        bulb.set_white()
-            else:
+            match bulb_state["mode"]:
+                case "colour":
+                    bulb.set_colour(bulb_state["colour"])
+                case "white":
+                    bulb.set_white()
+
+            if not bulb_state['is_on']:
                 bulb.turn_off()
