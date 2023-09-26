@@ -4,8 +4,6 @@ services:
   app:
     build:
       dockerfile: Dockerfile
-    
-    #restart: unless-stopped
     ports:
       - 6666:6666/udp
       - 6667:6667/udp
