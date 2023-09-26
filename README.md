@@ -1,10 +1,11 @@
 # Raid Alert Smart Bulb Alarm
 
 Small application that makes your Tuya Smart Bulbs flash in red colour when raid alert starting, and in green colour - when it withdrawn.
+Your device, where you starting this app (computer/phone) should be in the same Wi-Fi network as your bulbs.
 
 ## Getting started
 
-1. Get API_ID and API_HASH from [telegram website](https://core.telegram.org/api/obtaining_api_id)
+1. Get API_ID and API_HASH using instruction on the [telegram website](https://core.telegram.org/api/obtaining_api_id)
 
 1. Create `.env` for credentials:
 
@@ -50,7 +51,7 @@ Small application that makes your Tuya Smart Bulbs flash in red colour when raid
         TELEGRAM_SESSION_STRING=<SESSION STRING>
     ```
 
-1. Setup Tuya by instruction [in the repo of TinyTuya](https://github.com/jasonacox/tinytuya#setup-wizard---getting-local-keys). It's slightly long ang not easy.
+1. Setup Tuya using instruction [in the repo of TinyTuya](https://github.com/jasonacox/tinytuya#setup-wizard---getting-local-keys). It's slightly long ang not easy.
 
 1. TinyTuya Wizard will create file `device.json` where will be info about your bulbs. You need fields `id` and `key`.
 
@@ -83,7 +84,6 @@ Small application that makes your Tuya Smart Bulbs flash in red colour when raid
         # in the docker (-d for background mode)
         docker compose up -d
     ```
-
 
 ## This project powered with
 
